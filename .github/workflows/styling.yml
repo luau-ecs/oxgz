@@ -1,0 +1,31 @@
+name: Style
+
+permissions:
+    actions: write
+
+defaults:
+    run:
+        shell: bash
+
+on:
+    push:
+        branches: ["main"]
+    pull_request:
+        branches: ["main"]
+
+jobs:
+    styling:
+        name: Styling
+        runs-on: ubuntu-latest
+        if: ${{ !contains(github.event.head_commit.message, 'skip ci') }}
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                  repository: luau-ecs/oxgz
+
+            - name: Setup Rokit
+              uses: CompeyDev/setup-rokit@v0.1.0
+
+            - name: Run styling
+              run: lune run styling
