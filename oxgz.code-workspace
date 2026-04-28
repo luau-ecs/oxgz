@@ -82,8 +82,9 @@
         "luau-lsp.sourcemap.enabled": false,
         "luau-lsp.platform.type": "roblox",
         "luau-lsp.diagnostics.workspace": false,
-        "luau-lsp.types.definitionFiles": {
-            "integer": "./integer.d.luau"
+        "luau-lsp.fflags.override": {
+            "LuauIntegerType": "Enabled",
+            "LuauIntegerLibrary": "Enabled",
         },
         // MD linter config for docs
         "markdownlint.config": {
