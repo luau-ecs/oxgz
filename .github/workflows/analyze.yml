@@ -44,7 +44,7 @@ jobs:
             - name: Setup Lune
               run: lune setup
 
-            - name: Run Test Script
+            - name: Perform Lints
               run: luaulsp analyze --base-luaurc=.luaurc --platform=standard --flag:LuauSolverV2=true --flag:LuauIntegerType=true --flag:LuauIntegerLibrary=true src > lint-result.txt
 
             - name: Upload Artifact
