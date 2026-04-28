@@ -1,0 +1,15 @@
+# Rojo Sourcemap
+/sourcemap.json
+
+# Vscode settings
+.vscode/**
+
+# Place files
+**.rbxl*
+**.rbxm
+
+# Lock files
+**.lock
+
+# Zensical
+site
